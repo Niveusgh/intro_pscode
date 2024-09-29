@@ -2,3 +2,15 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+SET productsPerPackage to 2
+SET productsPerCase to 50
+SET totalProducts to 0
+SET packageCount to 0
+
+WHILE totalProducts < productsPerCase
+    INCREMENT packageCount by 1
+    SET totalProducts to packageCount * productsPerPackage
+    PRINT totalProducts
+END WHILE
+
+PRINT "Case full with " + packageCount + " packages."

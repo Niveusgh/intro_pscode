@@ -2,3 +2,25 @@
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
 
+SET secretNumber to a random integer between 1 and 10
+SET guessesLeft to 3
+
+WHILE guessesLeft > 0
+    DISPLAY "Enter your guess (1-10). You have " + guessesLeft + " guesses left."
+    INPUT playerGuess
+    
+    IF playerGuess equals secretNumber THEN
+        DISPLAY "Congratulations! You guessed the number."
+        EXIT WHILE loop
+    ELSE IF playerGuess < secretNumber THEN
+        DISPLAY "Too low!"
+    ELSE
+        DISPLAY "Too high!"
+    END IF
+    
+    DECREMENT guessesLeft by 1
+END WHILE
+
+IF guessesLeft equals 0 THEN
+    DISPLAY "Sorry, you're out of guesses. The number was " + secretNumber
+END IF

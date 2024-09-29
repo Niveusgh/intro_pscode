@@ -1,4 +1,29 @@
 # Client Task B #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+SET customerPosition to startingPosition
+SET targetPosition to itemLocation
 
+WHILE customerPosition is not equal to targetPosition
+    DISPLAY "You are at position: " + customerPosition
+    DISPLAY "Target is at: " + targetPosition
+    
+    DISPLAY "Enter direction to move (N/S/E/W):"
+    INPUT direction
+    
+    IF direction is "N" THEN
+        INCREMENT customerPosition.y by 1
+    ELSE IF direction is "S" THEN
+        DECREMENT customerPosition.y by 1
+    ELSE IF direction is "E" THEN
+        INCREMENT customerPosition.x by 1
+    ELSE IF direction is "W" THEN
+        DECREMENT customerPosition.x by 1
+    ELSE
+        DISPLAY "Invalid direction. Try again."
+    END IF
+    
+    DISPLAY "You moved to: " + customerPosition
+END WHILE
+
+DISPLAY "You've reached your destination!"
